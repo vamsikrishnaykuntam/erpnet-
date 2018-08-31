@@ -1,0 +1,4 @@
+  <div align="middle"> <form method="get" action="training.html">
+    <button class="vamsibutton" type="submit">Corporate Trainings</button>      
+    </form> 
+  </div>

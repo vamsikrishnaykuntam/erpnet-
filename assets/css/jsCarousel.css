@@ -1,0 +1,86 @@
+﻿.jscarousal
+{
+	width: 100%;
+	height: 150px;
+/*	background-color: #121212;
+	border: solid 1px #7A7677;
+*/	margin: 0;
+	padding: 0;
+	padding: 22px 8px 22px 8px;
+	position: relative; /*overflow: hidden;*/
+}
+.jscarousal .jscarousal-left, .jscarousal .jscarousal-right
+{
+	float: left;
+	width: 23px;
+	height: 98px;
+	background-color: #121212;
+	color: White;
+	position: relative;
+	top: 12px;
+	cursor: pointer;
+}
+.jscarousal .jscarousal-left
+{
+	background-image: url(left_arrow.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+    display:none;
+}
+.jscarousal .jscarousal-right
+{
+	background-image: url(right_arrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	 display:none;
+}
+.jscarousal-contents
+{
+	width: 100%;
+	height: 81px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.jscarousal-contents > div
+{
+	position: absolute;
+	width: 100%;
+	height: 160px;
+}
+.jscarousal-contents > div > div
+{
+	float: left;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.jscarousal-contents img
+{
+	width: 200px;
+	height: 81px;
+	border: solid 0px #7A7677;
+}
+.hidden
+{
+	display: none;
+}
+.visible
+{
+	display: block;
+}
+.thumbnail-active
+{
+
+}
+.thumbnail-inactive
+{
+border:#ddd solid 0px;
+}
+.thumbnail-text
+{
+	color: #7A7677;
+	font-weight: bold;
+	text-align: left;
+	display: block;
+	padding: 10px 2px 2px 0px;
+}

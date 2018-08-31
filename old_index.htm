@@ -1,0 +1,567 @@
+<!DOCTYPE html><!--[if lt IE 7 ]><html class="ie ie6 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8 lte9 lte8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="forgery_protection_token" id="forgery_protection_token" content="bc6b88a4b4baa34108b05e391cc43ebb">
+<title>File Manager - Parallels Plesk Panel 11.5.30 for Microsoft Windows</title><link rel="shortcut icon" href="/favicon.ico">
+
+
+
+<link rel="stylesheet" href="/theme/css/common.css?1364324070">
+<link rel="stylesheet" href="/theme/css/main.css?1374767572">
+<link rel="stylesheet" href="/theme/css/main-buttons.css?1374083344">
+<link rel="stylesheet" href="/theme/css/custom.css?1373980580">
+
+    <script>
+        var searchBarParams = {"panelType":"hosting","actionUrl":"\/smb\/search\/results","skinUrl":"\/theme\/\/","locale":{"nothingFound":"No results found.","fieldStub":"Search...","moreResultsFound":"More than 10 results were found. Please refine your search."}};
+    </script>
+    
+
+<script type="text/javascript" src="/javascript/prototype.js?1375953024"></script>
+<script type="text/javascript" src="/javascript/jsw.js?1417880606"></script>
+<script type="text/javascript" src="/javascript/common.js?1417880604"></script>
+<script type="text/javascript" src="/smb/scripts/smb.js?1375953028"></script>
+<script type="text/javascript" src="/javascript/search.js?1375953024"></script>
+<script type="text/javascript" src="/smb/scripts/file-manager.js?1417880606"></script>
+<script>
+    Jsw.baseUrl = '/smb';
+    Jsw.skinUrl = '/theme/';
+</script>
+</head>
+<body>
+    <script type="text/javascript">
+                    $(document.body).addClassName('sid-main');
+            if (top != self) {
+                $(document.body).addClassName('sid-main-embedded');
+            }
+        
+                    $(document.body).addClassName('file-manager');
+        
+        if ($(document.body).hasClassName('sid-legacy')) {
+            $(document.body).addClassName('sid-main-legacy');
+        }
+    </script>
+
+    
+    <div class="tooltip" style="display: none;"><b><i><i><i><span></span></i></i></i></b></div>
+
+            <div id="page">
+    
+        <div id="wrapper">
+            <div id="top-wrapper" class="l-top">
+                <div class="l-top-inner">
+                                        <div id="top">
+                        <div id="header-wrapper">
+                            <div id="header">
+                                <h1 class="logo">
+                                    <span class="product-name">
+                                                                                    <img src="/theme/images/logos/panel-logo.png" alt="Parallels Plesk Panel 11.5.30 for Microsoft Windows">
+                                                                            </span>
+                                </h1>
+                                <div class="shortcuts">
+    <ul class="shortcuts-list">
+        <li class="shortcuts-item top-user-info ">
+            <div class="top-user-info-wrapper">
+                <div class="top-user-info-row top-subscriber">
+                    <div class="top-user-info-name">Logged in as</div>
+                    <div class="top-user-info-data">
+                        <div id="account-menu"></div>
+                    </div>
+                </div>
+                                    <div class="top-user-info-row top-subscription">
+                        <div class="top-user-info-name">Subscription</div>
+                        <div class="top-user-info-data">
+                            <div id="subscription-switch"></div>
+                        </div>
+                    </div>
+                            </div>
+        </li>
+        <li class="shortcuts-item top-help">
+            <div id="help-menu">
+            </div>
+        </li>
+
+        <li id="search" class="shortcuts-item top-search">
+            <!-- do not use form due to problems with old screens and forms[0] construction -->
+            <!-- form method="get" action="" id="search-form" onsubmit="return false;" -->
+                <fieldset class="search">
+                    <input type="text" class="search-input search-empty" autocomplete="off" value="" id="searchTerm" name="searchTerm">
+                    <input type="image" class="search-button" src="/theme/icons/16/plesk/search.png" id="searchButton">
+                </fieldset>
+                                    <div style="display: none;" id="searchResultsBlock" class="top-search-results">
+                        <table class="top-search-results-wrapper"><tbody><tr><td class="top-search-results-container">
+                            <div class="top-search-results-content">
+                            </div>
+                        </td></tr></tbody></table>
+                    </div>
+                            <!-- /form -->
+        </li>
+
+                    <li class="shortcuts-item top-company-logo">
+                <a href="http://www.parallels.com" target="_blank">
+                                            <img src="/theme/images/logos/company-logo.png"/>
+                                    </a>
+            </li>
+            </ul>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+Jsw.onReady(function() {
+            new Smb.Dropdown({
+            applyTo: 'subscription-switch',
+            items: [{"value":"\/account\/switch\/id\/2589","title":"aerpint.com"}],
+            title: 'aerpint.com',
+            onChange: function(dropdown, item) {
+                window.location.href = Jsw.baseUrl + item.value
+                    + '?returnUrl=' + '%2Ffile-manager%2Flist%3FcurrentDir%3D%2F%252Fhttpdocs'                    + '&activeModule=' + 'fileManager'            }
+        });
+        new Smb.Dropdown({
+        applyTo: 'account-menu',
+        items: [{"title":"Edit Profile","href":"\/smb\/my-profile","styleClass":"sb-profile"},{"title":"Log out","href":"\/logout.php3","styleClass":"sb-logout"}],
+        title: '\x3Cb\x3Eaerpivnt\x3C/b\x3E',
+        forceDropdown: true
+    });
+    new Smb.Dropdown({
+        applyTo: 'help-menu',
+        items: [{"title":"Read the Guide","href":"\/smb\/help\/redirect\/controller-name\/file-manager\/action-name\/list","styleClass":"sb-manual","target":"help"},{"title":"Watch Video Tutorials","styleClass":"sb-video","href":"\/smb\/help\/tutorials\/"},{"title":"Suggest an Idea","styleClass":"sb-feedback","href":"http:\/\/plesk.uservoice.com","target":"_blank"}],
+        title: '\x3Cspan class="s-btn sb-help"\x3E\x3Ci\x3E\x3Ci\x3E\x3Ci\x3E\x3Cspan\x3EHelp\x3C/span\x3E\x3C/i\x3E\x3C/i\x3E\x3C/i\x3E\x3C/span\x3E',
+        forceDropdown: true
+    });
+});
+//]]>
+</script>                                                                                            </div>
+                        </div>
+                    </div>
+                                                <div id="navbar"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+Jsw.onReady(function() {
+    new Smb.NavigationTabs({
+        id: 'navbar',
+        applyTo: 'navbar',
+        items: [{"componentType":"Jsw.bar.Button","title":"Websites &amp; Domains","href":"\/web\/view","containerCls":"","addCls":"nav-sites"},{"componentType":"Jsw.bar.Button","title":"Mail","href":"\/email-address","containerCls":"","addCls":"nav-mail"},{"componentType":"Jsw.bar.Button","title":"Applications","href":"\/app","containerCls":"","addCls":"nav-apps"},{"componentType":"Jsw.bar.Button","title":"Files","href":"\/file-manager\/list","containerCls":"active","addCls":"nav-files"},{"componentType":"Jsw.bar.Button","title":"Statistics","href":"\/statistics","containerCls":"","addCls":"nav-statistics"},{"componentType":"Jsw.bar.Button","title":"Users","href":"\/user\/list","containerCls":"","addCls":"nav-users"},{"componentType":"Jsw.bar.Button","title":"Account","href":"\/account","containerCls":"","addCls":"nav-account"}]    });
+});
+//]]>
+</script>
+                                    </div>
+            </div>
+            <div id="content-wrapper">
+                    <div id="content">
+    <div id="pathbar-wrapper"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+Jsw.onReady(function() {
+    new Jsw.Pathbar({
+        id: 'pathbar',
+        cls: 'pathbar clearfix',
+        renderTo: 'pathbar-wrapper',
+        items: []    });
+});
+//]]>
+</script>
+
+        <div class="heading no-border">
+        <div class="heading-area">
+            <div class="toolbar">
+                <span id="toolbar-content"></span>
+                            </div>
+                        <h2><span>File Manager</span></h2>
+                                </div>
+    </div>
+    
+    <div class="b-content ">
+                <div class="b-content-wrap clearfix">
+            <div id="content-body" class="b-content-main">
+                <div id="main">
+                    
+    <div id="fm" class="objects-management-box fm clearfix">
+    <div id="objects-list" class="objects-list">
+        <div class="objects-content">
+            <div id="objects-list-content-area" class="objects-content-area">
+                <div id="fm-tree" class="tree"></div>
+            </div>
+        </div>
+    </div>
+    <div id="objects-details" class="objects-details">
+        <div id="objects-warnings" class="warning-block" style="display: none; "></div>
+        <div id="fm-content"></div>
+    </div>
+    <div class="fm-footer">
+    </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+Jsw.onReady(function() {
+
+    var copyMoveTreeConfig = {
+        applyTo: 'fm-modal-dialog-box-files-tree',
+        data: [{"name":".plesk","path":"\/.plesk"},{"name":"anon_ftp","path":"\/anon_ftp"},{"name":"assets","path":"\/assets"},{"name":"cgi-bin","path":"\/cgi-bin"},{"name":"error_docs","path":"\/error_docs"},{"name":"httpdocs","path":"\/httpdocs"},{"name":"httpsdocs","path":"\/httpsdocs"},{"name":"logs","path":"\/logs"},{"name":"picture_library","path":"\/picture_library"},{"name":"private","path":"\/private"},{"name":"statistics","path":"\/statistics"},{"name":"subdomains","path":"\/subdomains"},{"name":"vault_scripts","path":"\/vault_scripts"},{"name":"web_users","path":"\/web_users"}],
+        dataUrl: '/file-manager/tree-data',
+        rootNodeTitle: 'Root directory',
+        waitMessage: 'Please wait...'    };
+
+    var filesList = new Smb.FileManager.Explorer({
+        applyTo: 'fm-content',
+        data: {"pager":{"pageCount":1,"itemCountPerPage":100000,"first":1,"current":1,"last":1,"pagesInRange":{"1":1},"firstPageInRange":1,"lastPageInRange":1,"currentItemCount":17,"totalItemCount":17,"firstItemNumber":1,"lastItemNumber":17},"state":{"sortField":"name","sortDirection":"up","currentPage":1,"itemsPerPage":100000,"searchFilters":[],"forceShowSearch":false,"currentDir":"\/httpdocs","currentDirReadonly":false},"data":[{"id":"..","name":"..","modificationTimestamp":"1453332091","modificationDate":"Jan 20, 2016 11:21 PM","size":"","formatedSize":"","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":true,"type":0,"icon":"\/theme\/icons\/16\/plesk\/uplevel.png"},{"id":"aspnet_client","name":"aspnet_client","modificationTimestamp":"1414254405","modificationDate":"Oct 25, 2014 05:26 PM","size":"","formatedSize":"","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":true,"type":1,"icon":"\/theme\/icons\/16\/plesk\/file-folder.png","actions":[{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/aspnet_client"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=aspnet_client"}]},{"id":"assets","name":"assets","modificationTimestamp":"1406272014","modificationDate":"Jul 25, 2014 08:06 AM","size":"","formatedSize":"","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":true,"type":1,"icon":"\/theme\/icons\/16\/plesk\/file-folder.png","actions":[{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/assets"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=assets"}]},{"id":"picture_library","name":"picture_library","modificationTimestamp":"1456373324","modificationDate":"Feb 25, 2016 04:08 AM","size":"","formatedSize":"","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":true,"type":1,"icon":"\/theme\/icons\/16\/plesk\/file-folder.png","actions":[{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/picture_library"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=picture_library"}]},{"id":"wordpress","name":"wordpress","modificationTimestamp":"1453332122","modificationDate":"Jan 20, 2016 11:22 PM","size":"","formatedSize":"","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":true,"type":1,"icon":"\/theme\/icons\/16\/plesk\/file-folder.png","actions":[{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/wordpress"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=wordpress"}]},{"id":"about.html","name":"about.html","modificationTimestamp":"1452041832","modificationDate":"Jan 6, 2016 12:57 AM","size":"10333","formatedSize":"10.1 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=about.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=about.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=about.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/about.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=about.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=about.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=about.html"},{"id":"client.html","name":"client.html","modificationTimestamp":"1452039984","modificationDate":"Jan 6, 2016 12:26 AM","size":"8026","formatedSize":"7.8 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=client.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=client.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=client.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/client.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=client.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=client.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=client.html"},{"id":"contact.html","name":"contact.html","modificationTimestamp":"1454546892","modificationDate":"Feb 4, 2016 12:48 AM","size":"10427","formatedSize":"10.2 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=contact.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=contact.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=contact.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/contact.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=contact.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=contact.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=contact.html"},{"id":"index.html","name":"index.html","modificationTimestamp":"1456462926","modificationDate":"Feb 26, 2016 05:02 AM","size":"14593","formatedSize":"14.3 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=index.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=index.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=index.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/index.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=index.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=index.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=index.html"},{"id":"mail_failure.html","name":"mail_failure.html","modificationTimestamp":"1406272014","modificationDate":"Jul 25, 2014 08:06 AM","size":"7636","formatedSize":"7.5 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=mail_failure.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=mail_failure.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=mail_failure.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/mail_failure.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=mail_failure.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=mail_failure.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=mail_failure.html"},{"id":"mail_success.html","name":"mail_success.html","modificationTimestamp":"1406272014","modificationDate":"Jul 25, 2014 08:06 AM","size":"7672","formatedSize":"7.5 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=mail_success.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=mail_success.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=mail_success.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/mail_success.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=mail_success.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=mail_success.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=mail_success.html"},{"id":"partners.html","name":"partners.html","modificationTimestamp":"1452040030","modificationDate":"Jan 6, 2016 12:27 AM","size":"7869","formatedSize":"7.7 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=partners.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=partners.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=partners.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/partners.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=partners.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=partners.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=partners.html"},{"id":"products.html","name":"products.html","modificationTimestamp":"1452041904","modificationDate":"Jan 6, 2016 12:58 AM","size":"7935","formatedSize":"7.7 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=products.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=products.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=products.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/products.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=products.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=products.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=products.html"},{"id":"send_mail.php","name":"send_mail.php","modificationTimestamp":"1406272014","modificationDate":"Jul 25, 2014 08:06 AM","size":"1049","formatedSize":"1.0 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":6,"icon":"\/theme\/icons\/16\/plesk\/file-webscript.png","actions":[{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=send_mail.php"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=send_mail.php"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/send_mail.php"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=send_mail.php"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=send_mail.php"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=send_mail.php"},{"id":"services.html","name":"services.html","modificationTimestamp":"1452040744","modificationDate":"Jan 6, 2016 12:39 AM","size":"9703","formatedSize":"9.5 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=services.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=services.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=services.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/services.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=services.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=services.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=services.html"},{"id":"training.html","name":"training.html","modificationTimestamp":"1454548494","modificationDate":"Feb 4, 2016 01:14 AM","size":"8330","formatedSize":"8.1 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=training.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=training.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=training.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/training.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=training.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=training.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=training.html"},{"id":"useful-links.html","name":"useful-links.html","modificationTimestamp":"1452042162","modificationDate":"Jan 6, 2016 01:02 AM","size":"7738","formatedSize":"7.6 KB","user":"\"\"","group":"\"\"","filePerms":"--- --- --- ","isDirectory":false,"type":7,"icon":"\/theme\/icons\/16\/plesk\/file-html.png","actions":[{"name":"visualEdit","title":"Edit in HTML Editor","href":"\/smb\/file-manager\/legacy?fileAction=wysiwyg&cmd=&file=useful-links.html"},{"name":"textEdit","title":"Edit in Text Editor","href":"\/smb\/file-manager\/legacy?fileAction=edit&cmd=edit&file=useful-links.html"},{"separator":true},{"name":"view","title":"View","href":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=useful-links.html"},{"name":"browse","title":"Open in Browser","href":"http:\/\/aerpint.com\/useful-links.html"},{"name":"download","title":"Download","href":"\/smb\/file-manager\/download?file=useful-links.html"},{"separator":true},{"name":"rename","title":"Rename"},{"name":"permissions","title":"Change Permissions","href":"\/smb\/file-manager\/legacy?fileAction=permissions-windows&cmd=chmod&file=useful-links.html"}],"defaultAction":"\/smb\/file-manager\/legacy?fileAction=view&cmd=show&file=useful-links.html"}],"locale":{"recordsTotal":"%%total%% items total","pages":"Pages","firstPage":"First","lastPage":"Last","numberOfItemPerPage":"Number of entries per page","hideSearch":"Hide Search","showSearch":"Show Search","buttonSearch":"Search","buttonResetSearch":"Reset Search","noEntriesFound":"No items found.","itemsNotSelected":"Select items first.","messageBoxButtonYes":"Yes","messageBoxButtonNo":"No","messageBoxButtonOk":"OK","messageBoxButtonWait":"Please wait","allItems":"All","loadingTitle":"Please wait. Loading..."},"pathbar":{"id":"fm-pathbar-component","componentType":"Smb.FileManager.Pathbar","cls":"pathbar clearfix","items":[{"componentType":"Jsw.Pathbar.Item","title":"Root directory","href":"\/"},{"componentType":"Jsw.Pathbar.SimpleItem","title":"httpdocs"}],"locale":{"name":"Name","changeDate":"Modified","size":"Size","permissions":"Permissions","user":"User","group":"Group","buttonUploadFiles":"Upload Files","hintUploadFiles":"Upload files to the current directory.","buttonDeleteFile":"Remove","hintDeleteFile":"Remove selected files.","buttonCopyFiles":"Copy","hintCopyFiles":"Copy selected files to another directory.","buttonMoveFiles":"Move","hintMoveFiles":"Move selected files to another directory.","buttonMoreActions":"More","buttonCalculateSize":"Calculate Size","hintCalculateSize":"Calculate the total size of selected files.","buttonChangeTimestamp":"Change Timestamp","hintChangeTimestamp":"Change a timestamp of selected files.","buttonExtractArchive":"Extract Files","hintExtractArchive":"Extract files from selected archives to the current directory.","buttonCreateArchive":"Add to Archive","hintCreateArchive":"Add selected files to an archive.","buttonNewActions":"New","buttonNewFile":"File","hintNewFile":"Create a file.","buttonNewDirectory":"Directory","hintNewDirectory":"Create a directory.","rootDirectory":"Root directory","buttonView":"Change Settings","hintView":"Change File Manager settings.","confirmOnDelete":"Are you sure you want to permanently remove the selected files and directories?","itemActionView":"View","itemActionVisualEdit":"Edit in HTML Editor","itemActionTextEdit":"Edit in Text Editor","itemActionBrowse":"Open in Browser","itemActionDownload":"Download","itemActionPermissions":"Change Permissions","itemActionRename":"Rename","itemActionExtractArchive":"Extract Files","waitMessage":"Please wait...","readonlyHint":"This directory is read-only: You cannot create files or directories in it."}}},
+        dataUrl: '/file-manager/list-data',
+        pageable: false,
+        tree: {
+            id: 'fm-tree',
+            data: [{"name":".plesk","path":"\/.plesk"},{"name":"anon_ftp","path":"\/anon_ftp"},{"name":"assets","path":"\/assets"},{"name":"cgi-bin","path":"\/cgi-bin"},{"name":"error_docs","path":"\/error_docs"},{"name":"httpdocs","path":"\/httpdocs"},{"name":"httpsdocs","path":"\/httpsdocs"},{"name":"logs","path":"\/logs"},{"name":"picture_library","path":"\/picture_library"},{"name":"private","path":"\/private"},{"name":"statistics","path":"\/statistics"},{"name":"subdomains","path":"\/subdomains"},{"name":"vault_scripts","path":"\/vault_scripts"},{"name":"web_users","path":"\/web_users"}],
+            dataUrl: '/file-manager/tree-data',
+            rootNodeTitle: 'Root directory',
+            onNodeClick: function (directoryPath) {
+                Jsw.getComponent('fm-content').changeDirectory(directoryPath, true);
+            },
+            onRootNodeClick: function() {
+                Jsw.getComponent('fm-content').changeDirectory('/', true);
+            }
+        },
+        isDisabledItem: function(item) {
+            return ('..' == item.name);
+        },
+        columns: [
+            Object.extend(Object.clone(Jsw.list.COLUMN_SELECTION), { cls: 'select first', headerCls: 'select first', hideDisabled: true }),
+            {
+                header: 'Name',
+                sortable: true,
+                dataIndex: 'name',
+                cls: 'js-file-name fm-file-name',
+                renderer: function(item) {
+                    var icon = '<img src="' + item.icon + '"> ';
+
+                    if (item.isDirectory) {
+                        var linkStartTag = '<a class="fm-file-name-link" href="#" onclick="Jsw.getComponent(\'fm-content\').changeDirectory(\'' + item.name.replace(/"/g, '\\&quot;').replace(/'/g, '\\&apos;') + '\')">';
+                    } else {
+                        var linkStartTag = '<a class="fm-file-name-link" href="' + item.defaultAction + '">';
+                    }
+
+                    var itemTitle = '' +
+                        linkStartTag +
+                            icon +
+                            '<span>' + item.name.escapeHTML() + '</span>' +
+                        '</a>';
+
+                    var actions = '';
+                    if (item.actions) {
+                        actions = '<a class="s-btn sb-expand js-operations-button" href="#"><i><i><i><span>File Operations</span></i></i></i></a>';
+                    }
+
+                    var cellHtml = '' +
+                        actions +
+                        '<table class="fm-file-name-wrap">' +
+                            '<tbody>' +
+                                '<tr class="" id="">' +
+                                    '<td class="fm-file-name-container">' +
+                                        itemTitle +
+                                    '</td>' +
+                                '</tr>' +
+                            '</tbody>' +
+                        '</table>';
+
+                    return cellHtml;
+                }
+            }, {
+                header: 'Modified',
+                sortable: true,
+                dataIndex: 'modificationDate',
+                cls: 'minor number'
+            }, {
+                header: 'Size',
+                sortable: true,
+                dataIndex: 'formatedSize',
+                cls: 't-r number js-file-size last',
+                headerCls: 'last'
+            }
+                    ],
+        itemActions: {
+            browse: function(item, action) {
+                window.open(action.href);
+            },
+
+            rename: function(item, action) {
+                Jsw.getComponent('fm-content').showPopup(Smb.FileManager.Rename, {
+                    id: 'fm-rename',
+                    renderTo: 'fm-modal-dialog-box-rename',
+                    cls: 'popup-panel',
+                    handlerUrl: Jsw.prepareUrl('/file-manager/rename'),
+                    locale: {"title":"Rename","buttonOk":"OK","buttonCancel":"Cancel","waitButtonTitle":"Please wait","hint":"You are going to rename: %%file%%","fileName":"New name","errorFileExists":"A file with the same name already exists in this directory.","actionSuccess":"The file was renamed.","actionError":"Unable to rename %%file%%: %%reason%%","invalidSourceFileName":"Invalid original file name.","invalidDestinationFileName":"Invalid file name."},
+                    titleCls: 'pp-rename',
+                    fileName: item.id
+                });
+            },
+
+            extractArchive: function(item, action) {
+                Jsw.getComponent('fm-content').showPopup(Smb.FileManager.ExtractArchive, {
+                    id: 'fm-extract-archive',
+                    renderTo: 'fm-modal-dialog-box-extract-archive',
+                    cls: 'popup-panel',
+                    handlerUrl: Jsw.prepareUrl('/file-manager/extract-archive'),
+                    locale: {"title":"Extract Files","buttonOk":"OK","buttonCancel":"Cancel","hintFile":"Selected archive: %%file%%","hintFiles":"%%number%% archives selected.","destinationFolderHint":"Extract files to the following directory:","actionSuccess":"Files from the selected archives were successfully extracted.","actionError":"Unable to extract %%file%%: %%reason%%","invalidSourceFileType":"The file is not an archive.","overwriteExisting":"Replace existing files"},
+                    titleCls: 'pp-archive-extract',
+                    fileName: item.id
+                });
+            }
+        },
+        operations: [{
+                id: 'upload-file-button',
+                componentType: 'Smb.FileManager.UploadButton',
+                title: 'Upload Files',
+                description: 'Upload files to the current directory.',
+                addCls: 'sb-upload-file',
+                href: '#',
+                uploadPopupParams: {
+                    id: 'fm-upload',
+                    renderTo: 'fm-modal-dialog-box-upload',
+                    cls: 'popup-panel',
+                    handlerUrl: Jsw.prepareUrl('/file-manager/upload'),
+                    locale: {"title":"Select Files To Upload","hint":"Select Files To Upload","addFileItem":"Add one more file","removeFileItem":"Remove","buttonOk":"Ok","buttonCancel":"Cancel","buttonCancelUploadClicked":"Canceling...","buttonClose":"Close","buttonReplace":"Replace","buttonSkip":"Skip","noFilesSelectedForUpload":"No files selected. To upload the files, you have to select them.","uploadDialogTitle":"Uploading Files...","uploadDialogHint":"Please wait until the selected files are uploaded to the server.","replaceExistingFilesDialogHint":"The following files already exist in this directory. Do you want to replace them?","statusNotStarted":"Not started","statusUploading":"Uploading...","statusCompleted":"Completed","statusFailed":"Failed","statusCanceled":"Canceled","descriptionUploadProgress":"%%completed%% of %%total%% files were uploaded","failed":"Some files were not uploaded due to an error. The remaining files will not be uploaded.","errorDialogTitle":"Error","errorFileExists":"%%file%% already exists","uploadFinished":"%%completed%% files were uploaded to %%folder%%.","uploadFinishedSingleFile":"%%file%% was uploaded to %%folder%%.","uploadFailedSingleFile":"%%file%% was not uploaded to %%folder%%.","uploadFinishedNoFiles":"No files were uploaded.","uploadCanceled":"The upload was canceled. %%completed%% files were uploaded to %%folder%%.","dragAndDropArea":"Drop files here to upload","totalProgressText":"%%percent%% completed","progressText":"%%loaded%% of %%total%%","bytes":"B","kbytes":"KB","mbytes":"MB","gbytes":"GB"},
+                    titleCls: 'pp-upload'
+                }
+            }, {
+                componentType: 'Jsw.list.AdditionalActions',
+                title: 'New',
+                titleAddCls: 'sb-add-new',
+                operations: [{
+                        componentType: 'Jsw.SmallButton',
+                        title: 'File',
+                        description: 'Create a file.',
+                        addCls: 'sb-add-file',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            Jsw.getComponent('fm-content').showPopup(Smb.FileManager.CreateFile, {
+                                id: 'fm-create-file',
+                                renderTo: 'fm-modal-dialog-box-create-file',
+                                cls: 'popup-panel',
+                                handlerUrl: Jsw.prepareUrl('/file-manager/create-file'),
+                                locale: {"title":"Create a File","hint":"Add a file to: %%folder%%","fileName":"File name","htmlTemplate":"Use the HTML template","htmlTemplateHint":"Create a blank HTML page.","buttonOk":"OK","buttonCancel":"Cancel","waitButtonTitle":"Please wait","errorEmptyFileName":"Enter the file name.","errorFileExists":"A file with the same name already exists.","actionError":"Unable to create %%file%%: %%reason%%","fileCreated":"%%file%% was successfully created."},
+                                titleCls: 'pp-add-file'
+                            });
+                        }
+                    }, {
+                        componentType: 'Jsw.SmallButton',
+                        title: 'Directory',
+                        description: 'Create a directory.',
+                        addCls: 'sb-add-folder',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            Jsw.getComponent('fm-content').showPopup(Smb.FileManager.CreateFolder, {
+                                id: 'fm-create-directory',
+                                renderTo: 'fm-modal-dialog-box-create-directory',
+                                cls: 'popup-panel',
+                                handlerUrl: Jsw.prepareUrl('/file-manager/create-directory'),
+                                locale: {"title":"Create a Directory","hint":"Add a directory to: %%folder%%","folderName":"Directory name","buttonOk":"OK","buttonCancel":"Cancel","waitButtonTitle":"Please wait","errorEmptyDirectoryName":"Enter a directory name.","errorDirectoryExists":"A directory with the same name already exists.","actionError":"Unable to create the directory %%directory%%: %%reason%%","folderCreated":"The %%folder%% directory was successfully created."},
+                                titleCls: 'pp-add-folder'
+                            });
+                        }
+                    }
+                ]
+            }, {
+                componentType: 'Jsw.bar.Separator'
+            }, {
+                componentType: 'Jsw.SmallButton',
+                title: 'Copy',
+                description: 'Copy selected files to another directory.',
+                addCls: 'sb-copy',
+                href: '#',
+                handler: function() {
+                    Jsw.getComponent('fm-content').hasSelectedItems(function() {
+                        this.showPopup(Smb.FileManager.CopyFiles, {
+                            id: 'fm-copy-files',
+                            renderTo: 'fm-modal-dialog-box-copy-files',
+                            cls: 'popup-panel',
+                            handlerUrl: Jsw.prepareUrl('/file-manager/copy-files'),
+                            locale: {"title":"Copy Files","buttonOk":"OK","buttonCancel":"Cancel","hintFile":"You are going to copy: %%file%%","hintFiles":"You are going to copy %%number%% files\/directories.","destinationFolderHint":"Copy to the following directory:","overwriteExisting":"Replace existing files","errorFileExists":"A file with the same name already exists in the destination directory.","actionSuccess":"Selected files and directories were successfully copied.","actionError":"Unable to copy %%file%%: %%reason%%","invalidSourceFileName":"Invalid original file name.","invalidDestinationFileName":"Invalid file name.","destinationRequired":"Destination directory is not specified."},
+                            titleCls: 'pp-copy',
+                            tree: copyMoveTreeConfig
+                        });
+                    });
+                }
+            }, {
+                componentType: 'Jsw.SmallButton',
+                title: 'Move',
+                description: 'Move selected files to another directory.',
+                addCls: 'sb-move',
+                href: '#',
+                handler: function() {
+                    Jsw.getComponent('fm-content').hasSelectedItems(function() {
+                        this.showPopup(Smb.FileManager.MoveFiles, {
+                            id: 'fm-move-files',
+                            renderTo: 'fm-modal-dialog-box-move-files',
+                            cls: 'popup-panel',
+                            handlerUrl: Jsw.prepareUrl('/file-manager/move-files'),
+                            locale: {"title":"Move Files","buttonOk":"OK","buttonCancel":"Cancel","hintFile":"You are going to move: %%file%%","hintFiles":"You are going to move %%number%% files\/directories.","destinationFolderHint":"Move to the following directory:","overwriteExisting":"Replace existing files","errorFileExists":"A file with the same name already exists in the destination directory.","actionSuccess":"Selected files and directories were successfully moved.","actionError":"Unable to move %%file%%: %%reason%%","invalidSourceFileName":"Invalid original file name.","invalidDestinationFileName":"Invalid file name.","destinationRequired":"Destination directory is not specified."},
+                            titleCls: 'pp-move',
+                            tree: copyMoveTreeConfig
+                        });
+                    });
+                }
+            }, {
+                componentType: 'Jsw.bar.Separator'
+            }, {
+                componentType: 'Jsw.SmallButton',
+                id: 'buttonDeleteFile',
+                title: 'Remove',
+                description: 'Remove selected files.',
+                addCls: 'sb-remove-selected',
+                handler: function(event) {
+                    Jsw.getComponent('fm-content').execGroupOperation({
+                        url: '/file-manager/delete',
+                        subtype: 'delete',
+                        mouseEvent: event,
+                        locale: {
+                            confirmOnGroupOperation: 'Are you sure you want to permanently remove the selected files and directories?'                        },
+                        onSuccess: function() {
+                            Jsw.getComponent('fm-content').enable();
+                            Jsw.getComponent('fm-tree').reloadPath(Jsw.getComponent('fm-content').getCurrentDir());
+                        }
+                    });
+                }
+            }, {
+                componentType: 'Jsw.bar.Separator'
+            }, {
+                componentType: 'Jsw.list.AdditionalActions',
+                title: 'More',
+                operations: [{
+                        componentType: 'Jsw.SmallButton',
+                        title: 'Extract Files',
+                        description: 'Extract files from selected archives to the current directory.',
+                        addCls: 'sb-archive-extract',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            Jsw.getComponent('fm-content').hasSelectedItems(function() {
+                                this.showPopup(Smb.FileManager.ExtractArchive, {
+                                    id: 'fm-extract-archive',
+                                    renderTo: 'fm-modal-dialog-box-extract-archive',
+                                    cls: 'popup-panel',
+                                    handlerUrl: Jsw.prepareUrl('/file-manager/extract-archive'),
+                                    locale: {"title":"Extract Files","buttonOk":"OK","buttonCancel":"Cancel","hintFile":"Selected archive: %%file%%","hintFiles":"%%number%% archives selected.","destinationFolderHint":"Extract files to the following directory:","actionSuccess":"Files from the selected archives were successfully extracted.","actionError":"Unable to extract %%file%%: %%reason%%","invalidSourceFileType":"The file is not an archive.","overwriteExisting":"Replace existing files"},
+                                    titleCls: 'pp-archive-extract'
+                                });
+                            });
+                        }
+                    }, {
+                        componentType: 'Jsw.SmallButton',
+                        title: 'Add to Archive',
+                        description: 'Add selected files to an archive.',
+                        addCls: 'sb-archive-create',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            Jsw.getComponent('fm-content').hasSelectedItems(function() {
+                                this.showPopup(Smb.FileManager.CreateArchive, {
+                                    id: 'fm-create-archive',
+                                    renderTo: 'fm-modal-dialog-box-create-archive',
+                                    cls: 'popup-panel',
+                                    handlerUrl: Jsw.prepareUrl('/file-manager/create-archive'),
+                                    locale: {"title":"Add Files to Archive","hint":"The path to the archive file: %%folder%%","archiveName":"Archive file name","buttonOk":"OK","buttonCancel":"Cancel","waitButtonTitle":"Please wait","errorEmptyArchiveName":"Enter the archive file name.","errorEmptySelection":"No file(s) selected.","errorArchiveExists":"An archive with the same file name already exists.","archiveCreated":"%%archive%% was successfully created.","actionError":"Unable to create the archive: %%reason%%."},
+                                    titleCls: 'pp-archive-create'
+                                });
+                            });
+                        }
+                    }, {
+                        componentType: 'Jsw.bar.HorizontalSeparator'
+                    }, {
+                        componentType: 'Jsw.SmallButton',
+                        title: 'Calculate Size',
+                        description: 'Calculate the total size of selected files.',
+                        addCls: 'sb-calculate',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            filesList.calculateSize();
+                        }
+                    }, {
+                        componentType: 'Jsw.SmallButton',
+                        title: 'Change Timestamp',
+                        description: 'Change a timestamp of selected files.',
+                        addCls: 'sb-change-time',
+                        cls: 'sb-btn',
+                        href: '#',
+                        handler: function() {
+                            Jsw.getComponent('fm-content').execGroupOperation({
+                                url: '/file-manager/touch',
+                                skipConfirmation: true
+                            });
+                        }
+                    }
+                ]
+            }, {
+                componentType: 'Jsw.SmallButton',
+                id: 'buttonView',
+                title: 'Change Settings',
+                description: 'Change File Manager settings.',
+                addCls: 'sb-settings',
+                handler: function() {
+                    Jsw.getComponent('fm-content').showPopup(Smb.FileManager.ViewSettings, {
+                        id: 'fm-settings',
+                        renderTo: 'fm-modal-dialog-box-settings',
+                        cls: 'popup-panel',
+                        handlerUrl: Jsw.prepareUrl('/file-manager/view-settings'),
+                        locale: {"title":"File Manager Settings","hint":"Here you can change the layout of File Manager as well as how the content in your directories is displayed.","folderTree":"Show the navigation pane","previewPanel":"Show preview","showAdvanced":"Show advanced settings","hideAdvanced":"Hide advanced settings","systemFiles":"Show system files and directories","permissions":"Show permissions","userAndGroup":"Show users and groups","buttonOk":"OK","buttonCancel":"Cancel","waitButtonTitle":"Please wait","actionError":"Unable to update view settings: %%reason%%","actionSuccess":"View settings were successfully updated."},
+                        titleCls: 'pp-settings',
+                        settings: {
+                            folderTree: true,
+                            previewPanel: false, // :TODO: not implemented
+                            systemFiles: true,
+                            permissions: false,
+                            userAndGroup: false                        }
+                    });
+                }
+            }
+        ]
+    });
+
+    Event.observe( window, 'resize', function() {
+        Smb.FileManager.resizeBlocks();
+    }, false);
+
+    new Smb.FileManager.DragAndDrop({
+        applyTo: 'fm-content-container',
+        dropAreaId: 'drop-area',
+        locale: {"title":"Select Files To Upload","hint":"Select Files To Upload","addFileItem":"Add one more file","removeFileItem":"Remove","buttonOk":"Ok","buttonCancel":"Cancel","buttonCancelUploadClicked":"Canceling...","buttonClose":"Close","buttonReplace":"Replace","buttonSkip":"Skip","noFilesSelectedForUpload":"No files selected. To upload the files, you have to select them.","uploadDialogTitle":"Uploading Files...","uploadDialogHint":"Please wait until the selected files are uploaded to the server.","replaceExistingFilesDialogHint":"The following files already exist in this directory. Do you want to replace them?","statusNotStarted":"Not started","statusUploading":"Uploading...","statusCompleted":"Completed","statusFailed":"Failed","statusCanceled":"Canceled","descriptionUploadProgress":"%%completed%% of %%total%% files were uploaded","failed":"Some files were not uploaded due to an error. The remaining files will not be uploaded.","errorDialogTitle":"Error","errorFileExists":"%%file%% already exists","uploadFinished":"%%completed%% files were uploaded to %%folder%%.","uploadFinishedSingleFile":"%%file%% was uploaded to %%folder%%.","uploadFailedSingleFile":"%%file%% was not uploaded to %%folder%%.","uploadFinishedNoFiles":"No files were uploaded.","uploadCanceled":"The upload was canceled. %%completed%% files were uploaded to %%folder%%.","dragAndDropArea":"Drop files here to upload","totalProgressText":"%%percent%% completed","progressText":"%%loaded%% of %%total%%","bytes":"B","kbytes":"KB","mbytes":"MB","gbytes":"GB"},
+        uploadPopupParams: {
+            id: 'fm-upload',
+            renderTo: 'fm-modal-dialog-box-upload',
+            cls: 'popup-panel',
+            handlerUrl: Jsw.prepareUrl('/file-manager/upload'),
+            locale: {"title":"Select Files To Upload","hint":"Select Files To Upload","addFileItem":"Add one more file","removeFileItem":"Remove","buttonOk":"Ok","buttonCancel":"Cancel","buttonCancelUploadClicked":"Canceling...","buttonClose":"Close","buttonReplace":"Replace","buttonSkip":"Skip","noFilesSelectedForUpload":"No files selected. To upload the files, you have to select them.","uploadDialogTitle":"Uploading Files...","uploadDialogHint":"Please wait until the selected files are uploaded to the server.","replaceExistingFilesDialogHint":"The following files already exist in this directory. Do you want to replace them?","statusNotStarted":"Not started","statusUploading":"Uploading...","statusCompleted":"Completed","statusFailed":"Failed","statusCanceled":"Canceled","descriptionUploadProgress":"%%completed%% of %%total%% files were uploaded","failed":"Some files were not uploaded due to an error. The remaining files will not be uploaded.","errorDialogTitle":"Error","errorFileExists":"%%file%% already exists","uploadFinished":"%%completed%% files were uploaded to %%folder%%.","uploadFinishedSingleFile":"%%file%% was uploaded to %%folder%%.","uploadFailedSingleFile":"%%file%% was not uploaded to %%folder%%.","uploadFinishedNoFiles":"No files were uploaded.","uploadCanceled":"The upload was canceled. %%completed%% files were uploaded to %%folder%%.","dragAndDropArea":"Drop files here to upload","totalProgressText":"%%percent%% completed","progressText":"%%loaded%% of %%total%%","bytes":"B","kbytes":"KB","mbytes":"MB","gbytes":"GB"},
+            titleCls: 'pp-upload'
+    }});
+
+    // black magic (fix glitches after the first rendering)
+    Smb.FileManager.resizeBlocks();
+    Smb.FileManager.resizeBlocks();
+});
+//]]>
+</script>
+
+                    </div> <!-- /main -->
+                </div> <!-- /b-content-main -->
+                            </div> <!-- /b-content-wrap -->
+        </div> <!-- /b-content -->
+
+
+                    </div> <!-- /content -->
+                </div> <!-- /content-wrapper -->
+            </div> <!-- /wrapper -->
+        </div> <!-- page -->
+        <div id="footer-wrapper">
+            <div id="footer">
+                                                            <a href="http://www.parallels.com" onclick="window.open(this.href); return false;">&copy; Copyright 1999-2013. Parallels IP Holdings GmbH. All rights reserved.</a>
+                                                                                </div>
+        </div>
+                <div id="bottomAnchor"></div>
+    </body>
+</html>
